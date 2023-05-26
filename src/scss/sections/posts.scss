@@ -7,7 +7,7 @@
   }
 
   .posts-section {
-    padding: 2rem;
+    padding: 3rem;
 
     .posts-container {
 
@@ -48,11 +48,14 @@
 }
 
 @include tablet {
+
   .mobile-hidden {
     display: block;
   }
 
   .posts-section {
+
+    padding: 6rem;
     .posts-container {
       .card {
         display: flex;
@@ -81,7 +84,11 @@
 
 
 @include desktop{
+
+
+
   .posts-section{
+    padding: 12rem;
     .posts-container{
 
       .all-cards{

@@ -7,7 +7,7 @@
   }
 
   .header-section {
-    padding: 2rem;
+    padding:  3rem;
 
     .nav-section {
       &_toggle {
@@ -81,6 +81,11 @@
 }
 
 @include tablet{
+
+  .header-section {
+    padding: 2rem 6rem;
+  }
+
   .nav-section_button{
     display: none;
   }
@@ -95,5 +100,11 @@
     align-items: center;
     justify-content: space-around;
   }
+  }
+}
+
+@include desktop{
+  .header-section{
+    padding: 2rem 12rem;
   }
 }

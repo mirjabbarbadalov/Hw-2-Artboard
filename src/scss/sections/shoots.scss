@@ -8,7 +8,7 @@
 
 
   .shots-section{
-    padding: 2rem;
+    padding: 3rem;
   
     .shots-container{
   
@@ -31,6 +31,7 @@
 
 @include tablet{
 
+
   .tablet-hidden{
     display: none;
   }
@@ -40,7 +41,8 @@
   }
 
   .shots-section{
-    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 6rem;
   
     .shots-container{
   
@@ -73,6 +75,12 @@
   }
 
   @include desktop{
+
+    .shots-section{
+      padding: 12rem;
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+
     .mobile-tablet-hidden{
       display: block;
     }
