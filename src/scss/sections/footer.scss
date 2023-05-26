@@ -1,0 +1,100 @@
+@import "../abstracts/all.scss";
+
+@include mobile {
+  .footer-section {
+    padding: 2rem;
+    background-color: $footerBack;
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      align-items: center;
+      justify-content: center;
+
+
+      &_title {
+        color: $footerTitle;
+        font-size: $fs-normal;
+        font-weight: $fw-bold;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 1.6rem;
+      }
+
+      &_description {
+        color: $footerComment;
+        font-size: $fs-small;
+        font-weight: $fw-normal;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 1.6rem;
+        text-align: center;
+      }
+
+      &_icons{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        &_icon{
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &.icon1{
+            border: 1px solid #F8902E;
+          }
+
+          &.icon2{
+            border: 1px solid #39599F;
+          }
+
+          &.icon3{
+            border: 1px solid #45B0E3;
+          }
+
+          &.icon4{
+            border: 1px solid #D97AB0;
+          }
+
+          &.icon5{
+            border: 1px solid #CC212C;
+          }
+        }
+      }
+
+      &_info{
+        color: $footerComment;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: $fs-small;
+        font-weight: $fw-normal;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 1.6rem;
+      }
+    }
+  
+  }
+}
+
+@include tablet{
+
+  .footer-section {
+
+    .footer-container {
+
+      &_info{
+        display: flex;
+        flex-direction: row;
+        gap: 1.2rem;
+
+      }
+    }
+  
+  }
+
+}

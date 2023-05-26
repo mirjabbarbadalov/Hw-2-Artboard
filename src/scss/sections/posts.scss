@@ -1,0 +1,114 @@
+@import "../abstracts/all.scss";
+
+@include mobile {
+
+  .mobile-hidden {
+    display: none;
+  }
+
+  .posts-section {
+    padding: 2rem;
+
+    .posts-container {
+
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      &_title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: $fw-bold;
+        font-size: $fs-normal;
+        color: $sectionTitle;
+      }
+    }
+
+    .card {
+      &_img {
+        margin-top: 1.4rem;
+        width: 50%;
+      }
+
+      &_title {
+        color: $sectionTitle;
+        font-size: $fs-normal;
+        font-weight: $fw-bold;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 1.6rem;
+      }
+
+      &_comment {
+        color: $sectionComment;
+        font-weight: $fw-normal;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 1.2rem;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .mobile-hidden {
+    display: block;
+  }
+
+  .posts-section {
+    .posts-container {
+      .card {
+        display: flex;
+
+        &_img{
+          width: 25%;
+        }
+
+        .card-info {
+          width: 50%;
+          margin-left: 2rem;
+
+          .card_description {
+            color: $sectionComment;
+            font-size: $fs-normal;
+            font-weight: $fw-normal;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 1.2rem;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include desktop{
+  .posts-section{
+    .posts-container{
+
+      .all-cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas:
+         "card1 card2"
+         "card3 card4";
+
+         .card{
+          width: 100%
+         }
+
+        .card1{
+          grid-area: card1;
+        }
+        .card2{
+          grid-area: card2;
+        }
+        .card3{
+          grid-area: card3;
+        }
+        .card4{
+          grid-area: card4;
+        }
+      }
+    }
+  }
+}

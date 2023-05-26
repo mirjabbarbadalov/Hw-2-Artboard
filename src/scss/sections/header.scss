@@ -1,0 +1,99 @@
+@import "../abstracts/all.scss";
+
+@include mobile {
+
+  .bigger-menu{
+    display: none;
+  }
+
+  .header-section {
+    padding: 2rem;
+
+    .nav-section {
+      &_toggle {
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      &_button {
+        border: none;
+        background-color: white;
+        cursor: pointer;
+        padding: 1rem;
+        border-radius: 0.8rem;
+
+        .hamburger-icon {
+          width: 2rem;
+        }
+      }
+
+      .header-img {
+        width: 100%;
+        margin-top: 1.5rem;
+      }
+
+      &_menu {
+
+        &.hidden{
+          display: none;
+        }
+        
+        width: 14rem;
+        position: absolute;
+        top: 6.4rem;
+        right: 2rem;
+        background-color: $toggleItemBack ;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        &_item {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 0.4rem;
+
+          &:hover {
+            background-color: $toggleHoverBack;
+          }
+
+          &_link {
+            color: $navItemText;
+            font-size: $fs-small;
+            font-family: 'Roboto', sans-serif;
+
+            &.active {
+              color: $navActiveText ;
+            }
+          }
+        }
+
+      }
+    }
+    
+  }
+  
+}
+
+@include tablet{
+  .nav-section_button{
+    display: none;
+  }
+
+  .bigger-menu{
+    display: block;
+    padding: 1.6rem;
+
+  ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  }
+}
